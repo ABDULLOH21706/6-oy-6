@@ -1,0 +1,7 @@
+img {
+    width: 100%;
+}
+
+i, button {
+    cursor: pointer;
+}
