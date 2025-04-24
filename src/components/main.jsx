@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../components_style/main.css";
+import json_code from "./products.json";
 
 function main_func() {
   return (
@@ -119,9 +120,897 @@ function main_func() {
                     Ularni koʻrsata olamiz: 18 yoshdan kattamisiz?
                   </p>
                   <div className="flex items-center justify-start gap-[10px] w-[100%]">
-                    <button className="rounded-[10px] p-[6px] pl-[15px] pr-[15px] text-[15px] font-[500] border-[2px] border-[#D7D7D9]">Yo'q</button>
-                    <button className="rounded-[10px] p-[8px] pl-[15px] pr-[15px] text-white text-[15px] font-[500] bg-[#7000FF] hover:bg-[#7F4DFF]">Ha, men 18 yoshman</button>
+                    <button className="rounded-[10px] p-[6px] pl-[15px] pr-[15px] text-[15px] font-[500] border-[2px] border-[#D7D7D9]">
+                      Yo'q
+                    </button>
+                    <button className="rounded-[10px] p-[8px] pl-[15px] pr-[15px] text-white text-[15px] font-[500] bg-[#7000FF] hover:bg-[#7F4DFF]">
+                      Ha, men 18 yoshman
+                    </button>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-wrap items-center justify-start gap-[8px]">
+            <div className="flex flex-col items-center justify-between rounded-[8px] w-[220px] h-[500px] cursor-pointer">
+              <div className="w-[100%]">
+                <img
+                  src={json_code[0].img}
+                  alt=""
+                  className="rounded-[10px]"
+                  draggable="false"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center gap-[25px] w-[100%] mt-[10px]">
+                <div className="flex flex-col items-start justify-center gap-[10px] w-[100%]">
+                  <p className="text-[17px] font-[400] ml-[10px] mr-[10px]">
+                    {json_code[0].title}
+                  </p>
+                  <div className="flex items-center justify-start gap-[5px] w-[100%] ml-[10px]">
+                    <i className="fa fa-star text-[12px] text-[#FFB54C]"></i>
+                    <p className="text-[13px] font-[400]">
+                      {json_code[0].rate}
+                    </p>
+                    <p className="text-[13px] font-[400]">
+                      ({json_code[0].sharx} sharhlar)
+                    </p>
+                  </div>
+                  <div className="ml-[10px] rounded-[7px] bg-[#FFFF00] p-[3px]">
+                    <p className="text-[11px]">
+                      {json_code[0].oyiga} so'm/oyiga
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between pl-[10px] pr-[10px] w-[100%]">
+                  <div className="flex flex-col items-start justify-center">
+                    <del className="text-[#7E818C] text-[12px] font-[400]">
+                      {json_code[0].old_price}
+                    </del>
+                    <p className="text-[16px] font-[400]">
+                      {json_code[0].active_price}
+                    </p>
+                  </div>
+                  <button>
+                    <div className="rounded-[50px] border-[1px] hover:border-[#7E818C] border-[#ffff] p-[5px]">
+                      <svg
+                        data-v-55f6c8e0=""
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ui-icon  add-cart-icon"
+                      >
+                        <path
+                          d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                          fill="black"
+                        ></path>
+                        <path
+                          d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                          fill="black"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-between rounded-[8px] w-[220px] h-[500px] cursor-pointer">
+              <div className="w-[100%]">
+                <img
+                  src={json_code[1].img}
+                  alt=""
+                  className="rounded-[10px]"
+                  draggable="false"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center gap-[25px] w-[100%] mt-[10px]">
+                <div className="flex flex-col items-start justify-center gap-[10px] w-[100%]">
+                  <p className="text-[17px] font-[400] ml-[10px] mr-[10px]">
+                    {json_code[1].title}
+                  </p>
+                  <div className="flex items-center justify-start gap-[5px] w-[100%] ml-[10px]">
+                    <i className="fa fa-star text-[12px] text-[#FFB54C]"></i>
+                    <p className="text-[13px] font-[400]">
+                      {json_code[1].rate}
+                    </p>
+                    <p className="text-[13px] font-[400]">
+                      ({json_code[1].sharx} sharhlar)
+                    </p>
+                  </div>
+                  <div className="ml-[10px] rounded-[7px] bg-[#FFFF00] p-[3px]">
+                    <p className="text-[11px]">
+                      {json_code[1].oyiga} so'm/oyiga
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between pl-[10px] pr-[10px] w-[100%]">
+                  <div className="flex flex-col items-start justify-center">
+                    <del className="text-[#7E818C] text-[12px] font-[400]">
+                      {json_code[1].old_price}
+                    </del>
+                    <p className="text-[16px] font-[400]">
+                      {json_code[1].active_price}
+                    </p>
+                  </div>
+                  <button>
+                    <div className="rounded-[50px] border-[1px] hover:border-[#7E818C] border-[#ffff] p-[5px]">
+                      <svg
+                        data-v-55f6c8e0=""
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ui-icon  add-cart-icon"
+                      >
+                        <path
+                          d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                          fill="black"
+                        ></path>
+                        <path
+                          d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                          fill="black"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-between rounded-[8px] w-[220px] h-[500px] cursor-pointer">
+              <div className="w-[100%]">
+                <img
+                  src={json_code[2].img}
+                  alt=""
+                  className="rounded-[10px]"
+                  draggable="false"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center gap-[25px] w-[100%] mt-[10px]">
+                <div className="flex flex-col items-start justify-center gap-[10px] w-[100%]">
+                  <p className="text-[17px] font-[400] ml-[10px] mr-[10px]">
+                    {json_code[2].title}
+                  </p>
+                  <div className="flex items-center justify-start gap-[5px] w-[100%] ml-[10px]">
+                    <i className="fa fa-star text-[12px] text-[#FFB54C]"></i>
+                    <p className="text-[13px] font-[400]">
+                      {json_code[2].rate}
+                    </p>
+                    <p className="text-[13px] font-[400]">
+                      ({json_code[2].sharx} sharhlar)
+                    </p>
+                  </div>
+                  <div className="ml-[10px] rounded-[7px] bg-[#FFFF00] p-[3px]">
+                    <p className="text-[11px]">
+                      {json_code[2].oyiga} so'm/oyiga
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between pl-[10px] pr-[10px] w-[100%]">
+                  <div className="flex flex-col items-start justify-center">
+                    <del className="text-[#7E818C] text-[12px] font-[400]">
+                      {json_code[2].old_price}
+                    </del>
+                    <p className="text-[16px] font-[400]">
+                      {json_code[2].active_price}
+                    </p>
+                  </div>
+                  <button>
+                    <div className="rounded-[50px] border-[1px] hover:border-[#7E818C] border-[#ffff] p-[5px]">
+                      <svg
+                        data-v-55f6c8e0=""
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ui-icon  add-cart-icon"
+                      >
+                        <path
+                          d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                          fill="black"
+                        ></path>
+                        <path
+                          d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                          fill="black"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-between rounded-[8px] w-[220px] h-[500px] cursor-pointer">
+              <div className="w-[100%]">
+                <img
+                  src={json_code[3].img}
+                  alt=""
+                  className="rounded-[10px]"
+                  draggable="false"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center gap-[25px] w-[100%] mt-[10px]">
+                <div className="flex flex-col items-start justify-center gap-[10px] w-[100%]">
+                  <p className="text-[17px] font-[400] ml-[10px] mr-[10px]">
+                    {json_code[3].title}
+                  </p>
+                  <div className="flex items-center justify-start gap-[5px] w-[100%] ml-[10px]">
+                    <i className="fa fa-star text-[12px] text-[#FFB54C]"></i>
+                    <p className="text-[13px] font-[400]">
+                      {json_code[3].rate}
+                    </p>
+                    <p className="text-[13px] font-[400]">
+                      ({json_code[3].sharx} sharhlar)
+                    </p>
+                  </div>
+                  <div className="ml-[10px] rounded-[7px] bg-[#FFFF00] p-[3px]">
+                    <p className="text-[11px]">
+                      {json_code[3].oyiga} so'm/oyiga
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between pl-[10px] pr-[10px] w-[100%]">
+                  <div className="flex flex-col items-start justify-center">
+                    <del className="text-[#7E818C] text-[12px] font-[400]">
+                      {json_code[3].old_price}
+                    </del>
+                    <p className="text-[16px] font-[400]">
+                      {json_code[3].active_price}
+                    </p>
+                  </div>
+                  <button>
+                    <div className="rounded-[50px] border-[1px] hover:border-[#7E818C] border-[#ffff] p-[5px]">
+                      <svg
+                        data-v-55f6c8e0=""
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ui-icon  add-cart-icon"
+                      >
+                        <path
+                          d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                          fill="black"
+                        ></path>
+                        <path
+                          d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                          fill="black"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-between rounded-[8px] w-[220px] h-[500px] cursor-pointer">
+              <div className="w-[100%]">
+                <img
+                  src={json_code[4].img}
+                  alt=""
+                  className="rounded-[10px]"
+                  draggable="false"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center gap-[25px] w-[100%] mt-[10px]">
+                <div className="flex flex-col items-start justify-center gap-[10px] w-[100%]">
+                  <p className="text-[17px] font-[400] ml-[10px] mr-[10px]">
+                    {json_code[4].title}
+                  </p>
+                  <div className="flex items-center justify-start gap-[5px] w-[100%] ml-[10px]">
+                    <i className="fa fa-star text-[12px] text-[#FFB54C]"></i>
+                    <p className="text-[13px] font-[400]">
+                      {json_code[4].rate}
+                    </p>
+                    <p className="text-[13px] font-[400]">
+                      ({json_code[4].sharx} sharhlar)
+                    </p>
+                  </div>
+                  <div className="ml-[10px] rounded-[7px] bg-[#FFFF00] p-[3px]">
+                    <p className="text-[11px]">
+                      {json_code[4].oyiga} so'm/oyiga
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between pl-[10px] pr-[10px] w-[100%]">
+                  <div className="flex flex-col items-start justify-center">
+                    <del className="text-[#7E818C] text-[12px] font-[400]">
+                      {json_code[4].old_price}
+                    </del>
+                    <p className="text-[16px] font-[400]">
+                      {json_code[4].active_price}
+                    </p>
+                  </div>
+                  <button>
+                    <div className="rounded-[50px] border-[1px] hover:border-[#7E818C] border-[#ffff] p-[5px]">
+                      <svg
+                        data-v-55f6c8e0=""
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ui-icon  add-cart-icon"
+                      >
+                        <path
+                          d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                          fill="black"
+                        ></path>
+                        <path
+                          d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                          fill="black"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-between rounded-[8px] w-[220px] h-[500px] cursor-pointer">
+              <div className="w-[100%]">
+                <img
+                  src={json_code[5].img}
+                  alt=""
+                  className="rounded-[10px]"
+                  draggable="false"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center gap-[25px] w-[100%] mt-[10px]">
+                <div className="flex flex-col items-start justify-center gap-[10px] w-[100%]">
+                  <p className="text-[17px] font-[400] ml-[10px] mr-[10px]">
+                    {json_code[5].title}
+                  </p>
+                  <div className="flex items-center justify-start gap-[5px] w-[100%] ml-[10px]">
+                    <i className="fa fa-star text-[12px] text-[#FFB54C]"></i>
+                    <p className="text-[13px] font-[400]">
+                      {json_code[5].rate}
+                    </p>
+                    <p className="text-[13px] font-[400]">
+                      ({json_code[5].sharx} sharhlar)
+                    </p>
+                  </div>
+                  <div className="ml-[10px] rounded-[7px] bg-[#FFFF00] p-[3px]">
+                    <p className="text-[11px]">
+                      {json_code[5].oyiga} so'm/oyiga
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between pl-[10px] pr-[10px] w-[100%]">
+                  <div className="flex flex-col items-start justify-center">
+                    <del className="text-[#7E818C] text-[12px] font-[400]">
+                      {json_code[5].old_price}
+                    </del>
+                    <p className="text-[16px] font-[400]">
+                      {json_code[5].active_price}
+                    </p>
+                  </div>
+                  <button>
+                    <div className="rounded-[50px] border-[1px] hover:border-[#7E818C] border-[#ffff] p-[5px]">
+                      <svg
+                        data-v-55f6c8e0=""
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ui-icon  add-cart-icon"
+                      >
+                        <path
+                          d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                          fill="black"
+                        ></path>
+                        <path
+                          d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                          fill="black"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-between rounded-[8px] w-[220px] h-[500px] cursor-pointer">
+              <div className="w-[100%]">
+                <img
+                  src={json_code[6].img}
+                  alt=""
+                  className="rounded-[10px]"
+                  draggable="false"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center gap-[25px] w-[100%] mt-[10px]">
+                <div className="flex flex-col items-start justify-center gap-[10px] w-[100%]">
+                  <p className="text-[17px] font-[400] ml-[10px] mr-[10px]">
+                    {json_code[6].title}
+                  </p>
+                  <div className="flex items-center justify-start gap-[5px] w-[100%] ml-[10px]">
+                    <i className="fa fa-star text-[12px] text-[#FFB54C]"></i>
+                    <p className="text-[13px] font-[400]">
+                      {json_code[6].rate}
+                    </p>
+                    <p className="text-[13px] font-[400]">
+                      ({json_code[6].sharx} sharhlar)
+                    </p>
+                  </div>
+                  <div className="ml-[10px] rounded-[7px] bg-[#FFFF00] p-[3px]">
+                    <p className="text-[11px]">
+                      {json_code[6].oyiga} so'm/oyiga
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between pl-[10px] pr-[10px] w-[100%]">
+                  <div className="flex flex-col items-start justify-center">
+                    <del className="text-[#7E818C] text-[12px] font-[400]">
+                      {json_code[6].old_price}
+                    </del>
+                    <p className="text-[16px] font-[400]">
+                      {json_code[6].active_price}
+                    </p>
+                  </div>
+                  <button>
+                    <div className="rounded-[50px] border-[1px] hover:border-[#7E818C] border-[#ffff] p-[5px]">
+                      <svg
+                        data-v-55f6c8e0=""
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ui-icon  add-cart-icon"
+                      >
+                        <path
+                          d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                          fill="black"
+                        ></path>
+                        <path
+                          d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                          fill="black"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-between rounded-[8px] w-[220px] h-[500px] cursor-pointer">
+              <div className="w-[100%]">
+                <img
+                  src={json_code[7].img}
+                  alt=""
+                  className="rounded-[10px]"
+                  draggable="false"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center gap-[25px] w-[100%] mt-[10px]">
+                <div className="flex flex-col items-start justify-center gap-[10px] w-[100%]">
+                  <p className="text-[17px] font-[400] ml-[10px] mr-[10px]">
+                    {json_code[7].title}
+                  </p>
+                  <div className="flex items-center justify-start gap-[5px] w-[100%] ml-[10px]">
+                    <i className="fa fa-star text-[12px] text-[#FFB54C]"></i>
+                    <p className="text-[13px] font-[400]">
+                      {json_code[7].rate}
+                    </p>
+                    <p className="text-[13px] font-[400]">
+                      ({json_code[7].sharx} sharhlar)
+                    </p>
+                  </div>
+                  <div className="ml-[10px] rounded-[7px] bg-[#FFFF00] p-[3px]">
+                    <p className="text-[11px]">
+                      {json_code[7].oyiga} so'm/oyiga
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between pl-[10px] pr-[10px] w-[100%]">
+                  <div className="flex flex-col items-start justify-center">
+                    <del className="text-[#7E818C] text-[12px] font-[400]">
+                      {json_code[7].old_price}
+                    </del>
+                    <p className="text-[16px] font-[400]">
+                      {json_code[7].active_price}
+                    </p>
+                  </div>
+                  <button>
+                    <div className="rounded-[50px] border-[1px] hover:border-[#7E818C] border-[#ffff] p-[5px]">
+                      <svg
+                        data-v-55f6c8e0=""
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ui-icon  add-cart-icon"
+                      >
+                        <path
+                          d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                          fill="black"
+                        ></path>
+                        <path
+                          d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                          fill="black"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-between rounded-[8px] w-[220px] h-[500px] cursor-pointer">
+              <div className="w-[100%]">
+                <img
+                  src={json_code[8].img}
+                  alt=""
+                  className="rounded-[10px]"
+                  draggable="false"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center gap-[25px] w-[100%] mt-[10px]">
+                <div className="flex flex-col items-start justify-center gap-[10px] w-[100%]">
+                  <p className="text-[17px] font-[400] ml-[10px] mr-[10px]">
+                    {json_code[8].title}
+                  </p>
+                  <div className="flex items-center justify-start gap-[5px] w-[100%] ml-[10px]">
+                    <i className="fa fa-star text-[12px] text-[#FFB54C]"></i>
+                    <p className="text-[13px] font-[400]">
+                      {json_code[8].rate}
+                    </p>
+                    <p className="text-[13px] font-[400]">
+                      ({json_code[8].sharx} sharhlar)
+                    </p>
+                  </div>
+                  <div className="ml-[10px] rounded-[7px] bg-[#FFFF00] p-[3px]">
+                    <p className="text-[11px]">
+                      {json_code[8].oyiga} so'm/oyiga
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between pl-[10px] pr-[10px] w-[100%]">
+                  <div className="flex flex-col items-start justify-center">
+                    <del className="text-[#7E818C] text-[12px] font-[400]">
+                      {json_code[8].old_price}
+                    </del>
+                    <p className="text-[16px] font-[400]">
+                      {json_code[8].active_price}
+                    </p>
+                  </div>
+                  <button>
+                    <div className="rounded-[50px] border-[1px] hover:border-[#7E818C] border-[#ffff] p-[5px]">
+                      <svg
+                        data-v-55f6c8e0=""
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ui-icon  add-cart-icon"
+                      >
+                        <path
+                          d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                          fill="black"
+                        ></path>
+                        <path
+                          d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                          fill="black"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-between rounded-[8px] w-[220px] h-[500px] cursor-pointer">
+              <div className="w-[100%]">
+                <img
+                  src={json_code[9].img}
+                  alt=""
+                  className="rounded-[10px]"
+                  draggable="false"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center gap-[25px] w-[100%] mt-[10px]">
+                <div className="flex flex-col items-start justify-center gap-[10px] w-[100%]">
+                  <p className="text-[17px] font-[400] ml-[10px] mr-[10px]">
+                    {json_code[9].title}
+                  </p>
+                  <div className="flex items-center justify-start gap-[5px] w-[100%] ml-[10px]">
+                    <i className="fa fa-star text-[12px] text-[#FFB54C]"></i>
+                    <p className="text-[13px] font-[400]">
+                      {json_code[9].rate}
+                    </p>
+                    <p className="text-[13px] font-[400]">
+                      ({json_code[9].sharx} sharhlar)
+                    </p>
+                  </div>
+                  <div className="ml-[10px] rounded-[7px] bg-[#FFFF00] p-[3px]">
+                    <p className="text-[11px]">
+                      {json_code[9].oyiga} so'm/oyiga
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between pl-[10px] pr-[10px] w-[100%]">
+                  <div className="flex flex-col items-start justify-center">
+                    <del className="text-[#7E818C] text-[12px] font-[400]">
+                      {json_code[9].old_price}
+                    </del>
+                    <p className="text-[16px] font-[400]">
+                      {json_code[9].active_price}
+                    </p>
+                  </div>
+                  <button>
+                    <div className="rounded-[50px] border-[1px] hover:border-[#7E818C] border-[#ffff] p-[5px]">
+                      <svg
+                        data-v-55f6c8e0=""
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ui-icon  add-cart-icon"
+                      >
+                        <path
+                          d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                          fill="black"
+                        ></path>
+                        <path
+                          d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                          fill="black"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-between rounded-[8px] w-[220px] h-[500px] cursor-pointer">
+              <div className="w-[100%]">
+                <img
+                  src={json_code[10].img}
+                  alt=""
+                  className="rounded-[10px]"
+                  draggable="false"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center gap-[25px] w-[100%] mt-[10px]">
+                <div className="flex flex-col items-start justify-center gap-[10px] w-[100%]">
+                  <p className="text-[17px] font-[400] ml-[10px] mr-[10px]">
+                    {json_code[10].title}
+                  </p>
+                  <div className="flex items-center justify-start gap-[5px] w-[100%] ml-[10px]">
+                    <i className="fa fa-star text-[12px] text-[#FFB54C]"></i>
+                    <p className="text-[13px] font-[400]">
+                      {json_code[10].rate}
+                    </p>
+                    <p className="text-[13px] font-[400]">
+                      ({json_code[10].sharx} sharhlar)
+                    </p>
+                  </div>
+                  <div className="ml-[10px] rounded-[7px] bg-[#FFFF00] p-[3px]">
+                    <p className="text-[11px]">
+                      {json_code[10].oyiga} so'm/oyiga
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between pl-[10px] pr-[10px] w-[100%]">
+                  <div className="flex flex-col items-start justify-center">
+                    <del className="text-[#7E818C] text-[12px] font-[400]">
+                      {json_code[10].old_price}
+                    </del>
+                    <p className="text-[16px] font-[400]">
+                      {json_code[10].active_price}
+                    </p>
+                  </div>
+                  <button>
+                    <div className="rounded-[50px] border-[1px] hover:border-[#7E818C] border-[#ffff] p-[5px]">
+                      <svg
+                        data-v-55f6c8e0=""
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ui-icon  add-cart-icon"
+                      >
+                        <path
+                          d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                          fill="black"
+                        ></path>
+                        <path
+                          d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                          fill="black"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-between rounded-[8px] w-[220px] h-[500px] cursor-pointer">
+              <div className="w-[100%]">
+                <img
+                  src={json_code[11].img}
+                  alt=""
+                  className="rounded-[10px]"
+                  draggable="false"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center gap-[25px] w-[100%] mt-[10px]">
+                <div className="flex flex-col items-start justify-center gap-[10px] w-[100%]">
+                  <p className="text-[17px] font-[400] ml-[10px] mr-[10px]">
+                    {json_code[11].title}
+                  </p>
+                  <div className="flex items-center justify-start gap-[5px] w-[100%] ml-[10px]">
+                    <i className="fa fa-star text-[12px] text-[#FFB54C]"></i>
+                    <p className="text-[13px] font-[400]">
+                      {json_code[11].rate}
+                    </p>
+                    <p className="text-[13px] font-[400]">
+                      ({json_code[11].sharx} sharhlar)
+                    </p>
+                  </div>
+                  <div className="ml-[10px] rounded-[7px] bg-[#FFFF00] p-[3px]">
+                    <p className="text-[11px]">
+                      {json_code[11].oyiga} so'm/oyiga
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between pl-[10px] pr-[10px] w-[100%]">
+                  <div className="flex flex-col items-start justify-center">
+                    <del className="text-[#7E818C] text-[12px] font-[400]">
+                      {json_code[11].old_price}
+                    </del>
+                    <p className="text-[16px] font-[400]">
+                      {json_code[11].active_price}
+                    </p>
+                  </div>
+                  <button>
+                    <div className="rounded-[50px] border-[1px] hover:border-[#7E818C] border-[#ffff] p-[5px]">
+                      <svg
+                        data-v-55f6c8e0=""
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ui-icon  add-cart-icon"
+                      >
+                        <path
+                          d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                          fill="black"
+                        ></path>
+                        <path
+                          d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                          fill="black"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-between rounded-[8px] w-[220px] h-[500px] cursor-pointer">
+              <div className="w-[100%]">
+                <img
+                  src={json_code[12].img}
+                  alt=""
+                  className="rounded-[10px]"
+                  draggable="false"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center gap-[25px] w-[100%] mt-[10px]">
+                <div className="flex flex-col items-start justify-center gap-[10px] w-[100%]">
+                  <p className="text-[17px] font-[400] ml-[10px] mr-[10px]">
+                    {json_code[12].title}
+                  </p>
+                  <div className="flex items-center justify-start gap-[5px] w-[100%] ml-[10px]">
+                    <i className="fa fa-star text-[12px] text-[#FFB54C]"></i>
+                    <p className="text-[13px] font-[400]">
+                      {json_code[12].rate}
+                    </p>
+                    <p className="text-[13px] font-[400]">
+                      ({json_code[12].sharx} sharhlar)
+                    </p>
+                  </div>
+                  <div className="ml-[10px] rounded-[7px] bg-[#FFFF00] p-[3px]">
+                    <p className="text-[11px]">
+                      {json_code[12].oyiga} so'm/oyiga
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between pl-[10px] pr-[10px] w-[100%]">
+                  <div className="flex flex-col items-start justify-center">
+                    <del className="text-[#7E818C] text-[12px] font-[400]">
+                      {json_code[12].old_price}
+                    </del>
+                    <p className="text-[16px] font-[400]">
+                      {json_code[12].active_price}
+                    </p>
+                  </div>
+                  <button>
+                    <div className="rounded-[50px] border-[1px] hover:border-[#7E818C] border-[#ffff] p-[5px]">
+                      <svg
+                        data-v-55f6c8e0=""
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ui-icon  add-cart-icon"
+                      >
+                        <path
+                          d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                          fill="black"
+                        ></path>
+                        <path
+                          d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                          fill="black"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-between rounded-[8px] w-[220px] h-[500px] cursor-pointer">
+              <div className="w-[100%]">
+                <img
+                  src={json_code[13].img}
+                  alt=""
+                  className="rounded-[10px]"
+                  draggable="false"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center gap-[25px] w-[100%] mt-[10px]">
+                <div className="flex flex-col items-start justify-center gap-[10px] w-[100%]">
+                  <p className="text-[17px] font-[400] ml-[10px] mr-[10px]">
+                    {json_code[13].title}
+                  </p>
+                  <div className="flex items-center justify-start gap-[5px] w-[100%] ml-[10px]">
+                    <i className="fa fa-star text-[12px] text-[#FFB54C]"></i>
+                    <p className="text-[13px] font-[400]">
+                      {json_code[13].rate}
+                    </p>
+                    <p className="text-[13px] font-[400]">
+                      ({json_code[13].sharx} sharhlar)
+                    </p>
+                  </div>
+                  <div className="ml-[10px] rounded-[7px] bg-[#FFFF00] p-[3px]">
+                    <p className="text-[11px]">
+                      {json_code[13].oyiga} so'm/oyiga
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between pl-[10px] pr-[10px] w-[100%]">
+                  <div className="flex flex-col items-start justify-center">
+                    <del className="text-[#7E818C] text-[12px] font-[400]">
+                      {json_code[13].old_price}
+                    </del>
+                    <p className="text-[16px] font-[400]">
+                      {json_code[13].active_price}
+                    </p>
+                  </div>
+                  <button>
+                    <div className="rounded-[50px] border-[1px] hover:border-[#7E818C] border-[#ffff] p-[5px]">
+                      <svg
+                        data-v-55f6c8e0=""
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ui-icon  add-cart-icon"
+                      >
+                        <path
+                          d="M8 10V8H6V12.5C6 12.7761 5.77614 13 5.5 13C5.22386 13 5 12.7761 5 12.5V7H8C8 4.59628 9.95227 3 12 3C14.0575 3 16 4.70556 16 7H19V19.5C19 20.3284 18.3284 21 17.5 21H12.5C12.2239 21 12 20.7761 12 20.5C12 20.2239 12.2239 20 12.5 20H17.5C17.7761 20 18 19.7761 18 19.5V8H16V10H15V8H9V10H8ZM12 4C10.4477 4 9 5.20372 9 7H15C15 5.29444 13.5425 4 12 4Z"
+                          fill="black"
+                        ></path>
+                        <path
+                          d="M7.5 14C7.77614 14 8 14.2239 8 14.5V17H10.5C10.7761 17 11 17.2239 11 17.5C11 17.7761 10.7761 18 10.5 18H8V20.5C8 20.7761 7.77614 21 7.5 21C7.22386 21 7 20.7761 7 20.5V18H4.5C4.22386 18 4 17.7761 4 17.5C4 17.2239 4.22386 17 4.5 17H7V14.5C7 14.2239 7.22386 14 7.5 14Z"
+                          fill="black"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>
