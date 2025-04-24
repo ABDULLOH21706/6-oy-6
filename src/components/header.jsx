@@ -38,7 +38,7 @@ function header_func() {
           <p className="text-[#7000FF] text-[25px] font-[700]">uzum market</p>
         </div>
         <div className="flex items-center justify-center gap-[10px]">
-          <button className="w-[140px] h-[45px] rounded-[5px] bg-[#CECCFF]">
+          <button className="w-[140px] h-[45px] rounded-[5px] bg-[#CECCFF] hover:bg-[#b7b4ff]">
             Katalog
           </button>
           <div className="w-[500px] flex items-center justify-center border-[1px] border-[#DAC4C6] rounded-[5px]">
@@ -56,22 +56,60 @@ function header_func() {
           </div>
         </div>
         <div className="flex items-center justify-center gap-[10px]">
-          <button className="hover:bg-[#DEE0E5] flex items-center justify-center gap-[5px] rounded-[5px] h-[45px] pl-[10px] pr-[10px]">
+          <button className="hover:bg-[#DEE0E5] flex items-center justify-center gap-[5px] rounded-[5px] h-[45px] pl-[15px] pr-[15px]">
             <i class="fa-regular fa-user"></i>
             Kirish
           </button>
-          <button className="hover:bg-[#DEE0E5] flex items-center justify-center gap-[5px] rounded-[5px] h-[45px] pl-[10px] pr-[10px]">
+          <button className="hover:bg-[#DEE0E5] flex items-center justify-center gap-[5px] rounded-[5px] h-[45px] pl-[15px] pr-[15px]">
             <i className="fa-regular fa-heart"></i>
             Saralangan
           </button>
-          <button className="hover:bg-[#DEE0E5] flex items-center justify-center gap-[5px] rounded-[5px] h-[45px] pl-[10px] pr-[10px]">
+          <button className="hover:bg-[#DEE0E5] flex items-center justify-center gap-[5px] rounded-[5px] h-[45px] pl-[15px] pr-[15px]">
             <i className="fa fa-shop"></i>
             Savat
           </button>
         </div>
       </div>
-      <div>
-        
+      <div className="flex flex-col items-start justify-center gap-[10px] w-[100%] pt-[25px] pb-[25px] pl-[300px] pr-[300px]">
+        <div className="flex items-center justify-center gap-[10px] w-[100%]">
+          <div className="flex items-center justify-center cursor-pointer rounded-[5px] pl-[10px] pr-[10px] h-[30px] hover:bg-[#DEE0E5]">
+            <p className="text-[15px] font-[400]">Nasiya foydaliroq</p>
+          </div>
+          <div className="flex items-center justify-center cursor-pointer rounded-[5px] pl-[10px] pr-[10px] h-[30px] hover:bg-[#DEE0E5]">
+            <p className="text-[15px] font-[400]">Hafta tovarlari</p>
+          </div>
+          <div className="flex items-center justify-center cursor-pointer rounded-[5px] pl-[10px] pr-[10px] h-[30px] hover:bg-[#DEE0E5]">
+            <p className="text-[15px] font-[400]">Elektronika</p>
+          </div>
+          <div className="flex items-center justify-center cursor-pointer rounded-[5px] pl-[10px] pr-[10px] h-[30px] hover:bg-[#DEE0E5]">
+            <p className="text-[15px] font-[400]">Maishiy texnika</p>
+          </div>
+          <div className="flex items-center justify-center cursor-pointer rounded-[5px] pl-[10px] pr-[10px] h-[30px] hover:bg-[#DEE0E5]">
+            <p className="text-[15px] font-[400]">Kiyim</p>
+          </div>
+          <div className="flex items-center justify-center cursor-pointer rounded-[5px] pl-[10px] pr-[10px] h-[30px] hover:bg-[#DEE0E5]">
+            <p className="text-[15px] font-[400]">Poyabzallar</p>
+          </div>
+          <div className="flex items-center justify-center cursor-pointer rounded-[5px] pl-[10px] pr-[10px] h-[30px] hover:bg-[#DEE0E5]">
+            <p className="text-[15px] font-[400]">Aksessuralar</p>
+          </div>
+          <div className="flex items-center justify-center cursor-pointer rounded-[5px] pl-[10px] pr-[10px] h-[30px] hover:bg-[#DEE0E5]">
+            <p className="text-[15px] font-[400]">Go'zallik va parvarish</p>
+          </div>
+          <div className="flex items-center justify-center cursor-pointer rounded-[5px] pl-[10px] pr-[10px] h-[30px] hover:bg-[#DEE0E5]">
+            <p className="text-[15px] font-[400]">Salomatlik</p>
+          </div>
+          <div className="flex items-center justify-center cursor-pointer rounded-[5px] pl-[10px] pr-[10px] h-[30px] hover:bg-[#DEE0E5]">
+            <p className="text-[15px] font-[400]">Uy-ro'zg'or buyumlari</p>
+          </div>
+        </div>
+        <div className="flex items-center justify-center gap-[10px]">
+          <p className="text-[14px] font-[400] hover:font-[500]">Bosh sahifa</p>
+          <p>/</p>
+          <p className="text-[14px] font-[400] hover:font-[500]">Barcha toifalar</p>
+          <p>/</p>
+          <p className="text-[14px] font-[400] hover:font-[500]">Elektronika</p>
+        </div>
       </div>
     </header>
   );
