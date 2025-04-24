@@ -8,20 +8,19 @@ function header_func() {
         <div className="flex items-center justify-center gap-[25px]">
           <div className="flex items-center justify-center gap-[5px] cursor-pointer">
             <i class="fa-solid fa-location-dot"></i>
-            <p className="text-[14px] font-[600]">Ташкент</p>
+            <p className="text-[14px] font-[600]">Tashkent</p>
           </div>
-          <p className="text-[14px] font-[400] cursor-pointer">Пункти видачи</p>
+          <p className="text-[14px] font-[400] cursor-pointer">Topshirish punktlari</p>
         </div>
         <div className="flex items-center justify-center gap-[10px]">
           <div className="flex items-center justify-center gap-[10px] text-[14px] font-[400] cursor-pointer">
-            <p className="text-[#702AFC]">Стать продавцом</p>
+            <p className="text-[#702AFC]">Sotuvchi bo'lish</p>
             <p className="text-[#702AFC]">|</p>
-            <p className="text-[#702AFC]">Открыть пункт выдачи</p>
+            <p className="text-[#702AFC]">Topshirish punktini ochish</p>
           </div>
           <div className="flex items-center justify-center gap-[10px] text-[14px] font-[400] cursor-pointer">
-            <p className="text-[14px] font-[400]">Вопрос-ответ</p>
-            <p className="text-[14px] font-[400]">Мои заказы</p>
-            <p className="text-[14px] font-[400]">Русский</p>
+            <p className="text-[14px] font-[400]">Savol-javob</p>
+            <p className="text-[14px] font-[400]">Buyurtmalarim</p>
           </div>
         </div>
       </div>
@@ -37,9 +36,7 @@ function header_func() {
           <p className="text-[#7000FF] text-[25px] font-[700]">uzum market</p>
         </div>
         <div className="flex items-center justify-center gap-[10px]">
-                <button>
-                    
-                </button>
+          <button className="w-[140px] h-[45px] rounded-[5px] bg-[#CECCFF]"></button>
         </div>
       </div>
       <div></div>
