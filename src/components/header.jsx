@@ -4,13 +4,15 @@ import "../components_style/header.css";
 function header_func() {
   return (
     <header className="flex flex-col items-center justify-center w-[100%]">
-      <div className="flex items-center justify-between bg-[#F0F2F5] w-[100%] pt-[5px] pb-[5px] pl-[400px] pr-[400px]">
+      <div className="flex items-center justify-between bg-[#F0F2F5] w-[100%] pt-[5px] pb-[5px] pl-[300px] pr-[300px]">
         <div className="flex items-center justify-center gap-[25px]">
           <div className="flex items-center justify-center gap-[5px] cursor-pointer">
             <i class="fa-solid fa-location-dot"></i>
             <p className="text-[14px] font-[600]">Tashkent</p>
           </div>
-          <p className="text-[14px] font-[400] cursor-pointer">Topshirish punktlari</p>
+          <p className="text-[14px] font-[400] cursor-pointer">
+            Topshirish punktlari
+          </p>
         </div>
         <div className="flex items-center justify-center gap-[10px]">
           <div className="flex items-center justify-center gap-[10px] text-[14px] font-[400] cursor-pointer">
@@ -24,7 +26,7 @@ function header_func() {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-between w-[100%] pt-[25px] pb-[25px] pl-[400px] pr-[400px]">
+      <div className="flex items-center justify-between w-[100%] pt-[25px] pb-[25px] pl-[300px] pr-[300px]">
         <div className="flex items-center justify-center gap-[15px] cursor-pointer">
           <div className="w-[30px] cursor-pointer">
             <img
@@ -36,10 +38,41 @@ function header_func() {
           <p className="text-[#7000FF] text-[25px] font-[700]">uzum market</p>
         </div>
         <div className="flex items-center justify-center gap-[10px]">
-          <button className="w-[140px] h-[45px] rounded-[5px] bg-[#CECCFF]"></button>
+          <button className="w-[140px] h-[45px] rounded-[5px] bg-[#CECCFF]">
+            Katalog
+          </button>
+          <div className="w-[500px] flex items-center justify-center border-[1px] border-[#DAC4C6] rounded-[5px]">
+            <input
+              id="search"
+              type="text"
+              placeholder="Mahsulot va turkumlar izlash"
+              className="w-[100%] h-[45px] pl-[10px] pr-[10px] outline-none"
+            />
+            <label htmlFor="search">
+              <button className="rounded-tr-[5px] rounded-br-[5px] bg-[#EDEFF2] w-[100px] h-[45px]">
+                <i className="fa fa-search"></i>
+              </button>
+            </label>
+          </div>
+        </div>
+        <div className="flex items-center justify-center gap-[10px]">
+          <button className="hover:bg-[#DEE0E5] flex items-center justify-center gap-[5px] rounded-[5px] h-[45px] pl-[10px] pr-[10px]">
+            <i class="fa-regular fa-user"></i>
+            Kirish
+          </button>
+          <button className="hover:bg-[#DEE0E5] flex items-center justify-center gap-[5px] rounded-[5px] h-[45px] pl-[10px] pr-[10px]">
+            <i className="fa-regular fa-heart"></i>
+            Saralangan
+          </button>
+          <button className="hover:bg-[#DEE0E5] flex items-center justify-center gap-[5px] rounded-[5px] h-[45px] pl-[10px] pr-[10px]">
+            <i className="fa fa-shop"></i>
+            Savat
+          </button>
         </div>
       </div>
-      <div></div>
+      <div>
+        
+      </div>
     </header>
   );
 }
